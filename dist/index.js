@@ -1,11 +1,8 @@
-// ~~~~~~~~ Import Statements ~~~~~~~~~
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-// ~~~~~~~~~~~~ Variables ~~~~~~~~~~~~
-const tasks = []; // Stores tasks
-let newId = 0; // Id counter
-const PORT = 4000; // Host port
-// ~~~~~~~~ Schema Definition ~~~~~~~~
+const tasks = [];
+let newId = 0;
+const PORT = 4000;
 const typeDefs = `#graphql
 
   # Tasks
@@ -28,7 +25,6 @@ const typeDefs = `#graphql
     deleteTask(id: Int!): Task
   }
 `;
-// ~~~~~~~~~~~~ Resolvers ~~~~~~~~~~~~~
 const resolvers = {
     Query: {
         getAllTasks() {
@@ -61,12 +57,10 @@ const resolvers = {
         },
     },
 };
-// ~~~~~~~~~~Server Definition ~~~~~~~~~~
 const server = new ApolloServer({
     typeDefs,
     resolvers,
 });
-// ~~~~~~~~~~~ Initiating Server ~~~~~~~~
 const { url } = await startStandaloneServer(server, {
     listen: { port: PORT },
 });

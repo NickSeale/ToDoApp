@@ -12,7 +12,7 @@ The app has 4 functions:
 The server was written in TypeScript using the Apollo GraphQL server
 
 ## Installation
-1. Clone the repository
+1. Clone the repository: `git clone https://github.com/NickSeale/ToDoApp.git`
 2. Navigate to the project directory: `cd ToDoApp`
 3. Install modules: `npm i`
 4. Start the server: `npm start`
@@ -40,7 +40,7 @@ query{
 }
 ```
 
-### Create Task
+### Create a Task
 In the Operation section:
 ```
 mutation($description: String!){
@@ -80,7 +80,7 @@ In the Variables section:
 
 Replace with the task id to be marked complete
 
-### Delete Task
+### Delete a Task
 In the Operation section:
 ```
 mutation($id:Int){
