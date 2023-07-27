@@ -20,68 +20,84 @@ The server was written in TypeScript using the Apollo GraphQL server
 
 ## Usage
 ### Get All Tasks
-```query {
+```
+query {
   getAllTasks {
     id
     isCompleted
     description    
-  }}```
+  }}
+  ```
 
 ### Get Active Tasks
-```query{
+```
+query{
   getActiveTasks {
     id
     isCompleted
     description
   }
-}```
+}
+```
 
 ### Create Task
 In the Operation section:
-```mutation($description: String!){
+```
+mutation($description: String!){
   createTask(description: $description) {
     id
     isCompleted
     description
   }
-}```
+}
+```
 
 In the Variables section:
-```{
+```
+{
     "description": "Write your task here"
-}```
+}
+```
 
 ### Mark a Task Complete
 In the Operation section:
-```mutation($id: Int){
+```
+mutation($id: Int){
   markTaskComplete(id:$id) {
     id
     isCompleted
     description
   }
-}```
+}
+```
 
 In the Variables section:
-```{
+```
+{
     "id":2
-}```
+}
+```
 
 Replace with the task id to be marked complete
 
 ### Delete Task
 In the Operation section:
-```mutation($id:Int){
+```
+mutation($id:Int){
   deleteTask(id:$id) {
     id
     isCompleted
     description
   }
-}```
+}
+```
 
 In the Variables section:
-```{
+```
+{
     "id":2
-}```
+}
+```
 
 Replace with the task id to be deleted
 
