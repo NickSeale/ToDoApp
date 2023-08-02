@@ -1,5 +1,5 @@
 # LUSH To-Do App
-A technical assessment for LUSH cosmetics completed in July 2023.
+A technical assessment for LUSH cosmetics completed in August 2023.
 
 ## Functionality
 The app has 4 functions:
