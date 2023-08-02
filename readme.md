@@ -1,5 +1,5 @@
 # LUSH To-Do App
-A technical assessment for LUSH cosmetics completed in July 2023
+A technical assessment for LUSH cosmetics completed in July 2023.
 
 ## Functionality
 The app has 4 functions:
@@ -9,7 +9,7 @@ The app has 4 functions:
 4. Deleting to-do’s
 
 ## Technologies
-The server was written in TypeScript using the Apollo GraphQL server
+The server was written in TypeScript using the Apollo GraphQL server.
 
 ## Installation
 1. Clone the repository: `git clone https://github.com/NickSeale/ToDoApp.git`
@@ -19,18 +19,25 @@ The server was written in TypeScript using the Apollo GraphQL server
 5. Navigate your browser to the localhost server. The default is `http://localhost:4000/`
 
 ## Usage
-### Get All Tasks
-```
+The server can be tested with Apollo Server Sandbox by navigating your browsert to the default port listed above:
+![image](https://github.com/NickSeale/ToDoApp/assets/10787366/4d7296f4-b2d9-4ea0-94d5-e21596e8cb1e)
+Below are query and mutation operations for the To Do server. Each request example has the necessary Operations and Variables to complete the call
+
+### 1. Get All Tasks
+**Operations:**
+```javascript
 query {
   getAllTasks {
     id
     isCompleted
     description    
-  }}
-  ```
-
-### Get Active Tasks
+  }
+}
 ```
+
+### 2. Get Active Tasks
+**Operations:**
+```javascript
 query{
   getActiveTasks {
     id
@@ -40,9 +47,9 @@ query{
 }
 ```
 
-### Create a Task
-In the Operation section:
-```
+### 3. Create a Task
+**Operations:**
+```javascript
 mutation($description: String!){
   createTask(description: $description) {
     id
@@ -52,16 +59,16 @@ mutation($description: String!){
 }
 ```
 
-In the Variables section:
-```
+**Variables:**
+```javascript
 {
     "description": "Write your task here"
 }
 ```
 
-### Mark a Task Complete
-In the Operation section:
-```
+### 4. Mark a Task Complete
+**Operations:**
+```javascript
 mutation($id: Int){
   markTaskComplete(id:$id) {
     id
@@ -71,18 +78,18 @@ mutation($id: Int){
 }
 ```
 
-In the Variables section:
-```
+**Variables:**
+```javascript
 {
     "id":2
 }
 ```
 
-Replace with the task id to be marked complete
+Replace with the task `id` to be marked complete
 
-### Delete a Task
-In the Operation section:
-```
+### 5. Delete a Task
+**Operations:**
+```javascript
 mutation($id:Int){
   deleteTask(id:$id) {
     id
@@ -92,17 +99,16 @@ mutation($id:Int){
 }
 ```
 
-In the Variables section:
-```
+**Variables:**
+```javascript
 {
     "id":2
 }
 ```
 
-Replace with the task id to be deleted
+Replace with the task `id` to be deleted
 
 ## Connect with me
-
  <a href="https://www.linkedin.com/in/nseale/">
     <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />
  </a>
