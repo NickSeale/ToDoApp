@@ -69,7 +69,7 @@ mutation($description: String!){
 ### 4. Mark a Task Complete
 **Operations:**
 ```javascript
-mutation($id: Int){
+mutation($id: String){
   markTaskComplete(id:$id) {
     id
     isCompleted
@@ -81,7 +81,7 @@ mutation($id: Int){
 **Variables:**
 ```javascript
 {
-    "id":2
+    "id":"991a40bf-62f1-4eb7-bf43-e7eaa54638ec"
 }
 ```
 
@@ -90,7 +90,7 @@ Replace with the task `id` to be marked complete
 ### 5. Delete a Task
 **Operations:**
 ```javascript
-mutation($id:Int){
+mutation($id:String){
   deleteTask(id:$id) {
     id
     isCompleted
@@ -102,7 +102,7 @@ mutation($id:Int){
 **Variables:**
 ```javascript
 {
-    "id":2
+    "id":"991a40bf-62f1-4eb7-bf43-e7eaa54638ec"
 }
 ```
 
